@@ -3,36 +3,33 @@
 puts 'Seeding the database...'
 
 [
-  { pt: 'Arte', en: 'Art' },
-  { pt: 'Artes plásticas', en: 'Visual Arts' },
-  { pt: 'Circo', en: 'Circus' },
-  { pt: 'Comunidade', en: 'Community' },
-  { pt: 'Humor', en: 'Humor' },
-  { pt: 'Quadrinhos', en: 'Comicbooks' },
-  { pt: 'Dança', en: 'Dance' },
-  { pt: 'Design', en: 'Design' },
-  { pt: 'Eventos', en: 'Events' },
-  { pt: 'Moda', en: 'Fashion' },
-  { pt: 'Gastronomia', en: 'Gastronomy' },
-  { pt: 'Cinema & Vídeo', en: 'Film & Video' },
-  { pt: 'Jogos', en: 'Games' },
-  { pt: 'Jornalismo', en: 'Journalism' },
-  { pt: 'Música', en: 'Music' },
-  { pt: 'Fotografia', en: 'Photography' },
-  { pt: 'Ciência e Tecnologia', en: 'Science & Technology' },
-  { pt: 'Teatro', en: 'Theatre' },
-  { pt: 'Esporte', en: 'Sport' },
-  { pt: 'Web', en: 'Web' },
-  { pt: 'Carnaval', en: 'Carnival' },
-  { pt: 'Arquitetura & Urbanismo', en: 'Architecture & Urbanism' },
-  { pt: 'Literatura', en: 'Literature' },
-  { pt: 'Mobilidade e Transporte', en: 'Mobility & Transportation' },
-  { pt: 'Meio Ambiente', en: 'Environment' },
-  { pt: 'Negócios Sociais', en: 'Social Business' },
-  { pt: 'Educação', en: 'Education' },
-  { pt: 'Filmes de Ficção', en: 'Fiction Films' },
-  { pt: 'Filmes Documentários', en: 'Documentary Films' },
-  { pt: 'Filmes Universitários', en: 'Experimental Films' }
+  { pt: 'Astronomia', en: 'Astronomy' },
+  { pt: 'Ciencias Biomedicas', en: 'Biomedical Science' },
+  { pt: 'Negocios e Gestao', en: 'Business and Management' },
+  { pt: 'Quimica', en: 'Chemistry' },
+  { pt: 'Clima', en: 'Climate' },
+  { pt: 'Ciencia da Computacao', en: 'Computer Science' },
+  { pt: 'Ciencias da Terra e Geografia',  en: 'Earth Sciences and Geography' },
+  { pt: 'Economia', en: 'Economics' },
+  { pt: 'Educacao e Linguagem', en: 'Education and Language' },
+  { pt: 'Energia', en: 'Energy' },
+  { pt: 'Engenharia', en: 'Engineering' },
+  { pt: 'Ciencias Ambientais', en: 'Environmental Sciences' },
+  { pt: 'Ciencia e Nutricao Alimentar', en: 'Food Science and Nutrition' },
+  { pt: 'Lei', en: 'Law' },
+  { pt: 'Ciencias da Vida', en: 'Life Sciences' },
+  { pt: 'Materiais', en: 'Materials' },
+  { pt: 'Matematica', en: 'Mathematics' },
+  { pt: 'Medicina', en: 'Medicine' },
+  { pt: 'Filosofia', en: 'Philosophy' },
+  { pt: 'Fisica', en: 'Physics' },
+  { pt: 'Popular Science', en: 'Popular Science' },
+  { pt: 'Psicologia', en: 'Psychology' },
+  { pt: 'Saude Publica', en: 'Public Health' },
+  { pt: 'Ciencias Sociais', en: 'Social Sciences' },
+  { pt: 'Estatistica', en: 'Statistics' },
+  { pt: 'Agua', en: 'Water' },
+  { pt: 'Logistica', en: 'Logistics'},
 ].each do |name|
    category = Category.find_or_initialize_by_name_pt name[:pt]
    category.update_attributes({
@@ -52,22 +49,22 @@ puts 'Seeding the database...'
 end
 
 {
-  company_name: 'Catarse',
-  host: 'catarse.me',
-  base_url: "http://catarse.me",
-  blog_url: "http://blog.catarse.me",
-  email_contact: 'contato@catarse.me',
-  email_payments: 'financeiro@catarse.me',
-  email_projects: 'projetos@catarse.me',
-  email_system: 'system@catarse.me',
-  email_no_reply: 'no-reply@catarse.me',
-  facebook_url: "http://facebook.com/catarse.me",
+  company_name: 'OED',
+  host: 'oed.me',
+  base_url: "http://oed.me",
+  blog_url: "http://blog.oed.me",
+  email_contact: 'contact@oed.me',
+  email_payments: 'finance@oed.me',
+  email_projects: 'project@oed.me',
+  email_system: 'system@oed.me',
+  email_no_reply: 'no-reply@oed.me',
+  facebook_url: "http://facebook.com/oed",
   facebook_app_id: '173747042661491',
-  twitter_username: "catarse",
+  twitter_username: "oed",
   mailchimp_url: "http://catarse.us5.list-manage.com/subscribe/post?u=ebfcd0d16dbb0001a0bea3639&amp;id=149c39709e",
   catarse_fee: '0.13',
-  support_forum: 'http://suporte.catarse.me/',
-  base_domain: 'catarse.me',
+  support_forum: 'http://support.oed.me/',
+  base_domain: 'oed.me',
   uservoice_secret_gadget: 'change_this',
   uservoice_key: 'uservoice_key'
 }.each do |name, value|
@@ -87,8 +84,8 @@ Channel.find_or_create_by_name!(
 
 OauthProvider.find_or_create_by_name!(
   name: 'facebook',
-  key: 'your_facebook_app_key',
-  secret: 'your_facebook_app_secret',
+  key: '168190143370223',
+  secret: 'aeb31d61c3ba7eed0a005ee5ea3277b7',
   path: 'facebook'
 )
 
@@ -120,3 +117,4 @@ end
 
 puts '---------------------------------------------'
 puts 'Done!'
+
