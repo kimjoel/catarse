@@ -7,7 +7,7 @@ en:
       confirmed_backers: 'Confirmed backs'
       created_projects: 'Created projects'
   site:
-    title: "The biggest crowdfunding community in Brazil"
+    title: "Secure the future. THe first crowdfunded medical research insurance platform"
     meta_title:  "%{title} · %{company_name}"
     description: "O Catarse é uma ferramenta diferente – e colaborativa – para tirar o seu projeto do papel!"
     keywords: "catarse, crowdfunding, project, community, open source"
